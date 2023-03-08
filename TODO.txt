@@ -1,0 +1,41 @@
+- publish
+- SEO with Astro-SEO
+- Analytics of some kind, run them via PartyTown
+
+Home Page
+- Hero
+    - Pic of me
+    - Text
+    - BG image of purdue
+    - SVG written animation of signature
+    - Other animations play after SVG writes
+    - Include resume link in a button here as well
+- As you scroll down the svg goes into top left corner
+- Navbar
+    - About
+    - Skills
+    - Projects
+    - Contact
+- About
+    - Pic of me
+    - Bio text
+- Skills
+    - List of skills with icons
+    - Amount of experience shown
+    - Projects in each skill shown
+- Projects
+    - List of projects with thumbnails, title, basic description, and techs used
+    - Clicking on project shows more info on a separate page
+- Contact
+    - resume
+    - email, discord, github, linkedin
+
+Projects Pages - /projects/[project]
+- Same navbar as home page, but with the SVG already in the corner
+- Back button in top left to go back to home page list of projects
+- Use MDX to write the project pages in markdown, making it easier to add new projects
+- Needs project title, techs used, description, link to project, link to project repo
+- Also include some things I learned from the project, and what I would do differently if I were to do it again
+
+At bottom of each page, have a little monster that says "Thanks for visiting!" and waves
+- Make it using CSS animations if possible
