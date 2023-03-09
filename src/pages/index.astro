@@ -1,10 +1,12 @@
 ---
+import Nav from "../components/Nav.astro";
 import Signature from "../components/Signature.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Matthew Gardner">
 	<main class="">
+		<Nav />
 		<section class="w-full bg-red-500 flex md:flex-row flex-col justify-between pb-48" id="hero">
 			<div class="md:ml-48 md:mt-48 flex flex-col">
 				<Signature />
@@ -12,21 +14,37 @@ import Layout from "../layouts/Layout.astro";
 					Web Developer and Computer Science Student
 				</h1>
 			</div>
-			<div class="fade md:mr-72">
-				<img class="portrait" src="/goodpictureforjobstuff.jpg" />
+			<div class="fade flex justify-center md:mr-56 md:mt-24">
+				<img class="portrait" src="/portrait1.jpg" />
 			</div>
 		</section>
 	</main>
 </Layout>
 
 <style>
-	.portrait {
-		width: 400px;
-		height: 600px;
-		margin: 1em;
-		border-radius: 1%;
-		box-shadow: 0 0 12px 6px #fff; /* inner white */
+	#hero {
+		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://i.redd.it/hmehy8kd93ia1.png");
+		background-size: 150% 150%;
+		background-position: 100% 100%;
+		background-repeat: no-repeat;
 	}
+	@media (min-width: 768px) {
+		.portrait {
+			height: 700px;
+			margin: 1em;
+			border-radius: 1%;
+			box-shadow: 0 0 12px 6px #fff; /* inner white */
+		}
+	}
+	@media (max-width: 768px) {
+		.portrait {
+			height: 400px;
+			margin: 1em;
+			border-radius: 1%;
+			box-shadow: 0 0 12px 6px #fff; /* inner white */
+		}
+	}
+
 	@keyframes fade {
 		0% {
 			opacity: 0;
