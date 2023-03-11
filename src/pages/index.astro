@@ -7,14 +7,26 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Matthew Gardner">
 	<main class="">
 		<Nav />
-		<section class="w-full bg-red-500 flex md:flex-row flex-col justify-between pb-48" id="hero">
-			<div class="md:ml-48 md:mt-48 flex flex-col">
+		<section
+			class="w-full grid grid-cols-1 md:grid-cols-2 bg-red-500 flex md:flex-row flex-col justify-between"
+			id="hero"
+		>
+			<div class="flex mt-16 mb-8 text-center flex-col">
 				<Signature />
-				<h1 class="fade text-2xl md:text-4xl border-b-2 border-yellow-400 text-white p-5 md:p-0 md:pt-5">
-					Web Developer and Computer Science Student
+				<h1
+					class="mr-auto ml-auto align-center justify-center text-center fade text-2xl md:text-4xl lg:text-5xl text-white md:p-0"
+				>
+					<span class="leading-relaxed border-b-2 border-yellow-500"
+						>Web Developer and Computer Science Student</span
+					>
 				</h1>
+				<div class="hidden md:block mt-16">
+					<a href="/Matthew Gardner Resume.pdf" download="">
+						<button class="fade btn btn-yellow">Looking for a Resume?</button>
+					</a>
+				</div>
 			</div>
-			<div class="fade flex justify-center md:mr-56 md:mt-24">
+			<div class="fade flex m-16 mt-0 justify-center">
 				<img class="portrait" src="/portrait1.jpg" />
 			</div>
 		</section>
@@ -22,6 +34,16 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+	.btn {
+		@apply font-bold py-2 px-4 rounded;
+	}
+	.btn-yellow {
+		@apply bg-yellow-500 text-white;
+		transition: 0.25s ease-in-out;
+	}
+	.btn-yellow:hover {
+		@apply bg-yellow-700;
+	}
 	#hero {
 		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://i.redd.it/hmehy8kd93ia1.png");
 		background-size: 150% 150%;
@@ -30,7 +52,6 @@ import Layout from "../layouts/Layout.astro";
 	}
 	@media (min-width: 768px) {
 		.portrait {
-			height: 700px;
 			margin: 1em;
 			border-radius: 1%;
 			box-shadow: 0 0 12px 6px #fff; /* inner white */
@@ -38,7 +59,6 @@ import Layout from "../layouts/Layout.astro";
 	}
 	@media (max-width: 768px) {
 		.portrait {
-			height: 400px;
 			margin: 1em;
 			border-radius: 1%;
 			box-shadow: 0 0 12px 6px #fff; /* inner white */
