@@ -4,11 +4,7 @@
 
 Home Page
 - Hero
-    - Pic of me
-    - Text
-    - BG image of purdue
-    - SVG written animation of signature
-    - Other animations play after SVG writes
+    - Different? BG image of purdue
     - Include resume link in a button here as well
 - As you scroll down the svg goes into top left corner
 - Navbar

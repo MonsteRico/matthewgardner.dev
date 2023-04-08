@@ -2,23 +2,34 @@
 import Nav from "../components/Nav.astro";
 import Signature from "../components/Signature.astro";
 import Layout from "../layouts/Layout.astro";
+let sprites = [
+	{ scale: 0.1, img: "/skills/c.png" },
+	{ scale: 0.1, img: "/skills/c++.png" },
+	{ scale: 0.1, img: "/skills/css.webp" },
+	{ scale: 0.1, img: "/skills/git.png" },
+	{ scale: 0.1, img: "/skills/github.webp" },
+	{ scale: 0.1, img: "/skills/html.webp" },
+	{ scale: 0.1, img: "/skills/java.png" },
+	{ scale: 0.1, img: "/skills/next.webp" },
+	{ scale: 0.1, img: "/skills/node.webp" },
+	{ scale: 0.1, img: "/skills/python.png" },
+	{ scale: 0.1, img: "/skills/react.png" },
+	{ scale: 0.1, img: "/skills/sql.png" },
+	{ scale: 0.1, img: "/skills/tailwind.png" },
+	{ scale: 0.1, img: "/skills/typescript.png" },
+	{ scale: 0.1, img: "/skills/vercel.png" },
+	{ scale: 0.1, img: "/skills/vscode.png" },
+];
 ---
 
 <Layout title="Matthew Gardner">
 	<main class="">
 		<Nav />
-		<section
-			class="w-full grid grid-cols-1 md:grid-cols-2 bg-red-500 flex md:flex-row flex-col justify-between"
-			id="hero"
-		>
+		<section class="w-full grid grid-cols-1 md:grid-cols-2 bg-red-500 md:flex-row flex-col justify-between" id="hero">
 			<div class="flex mt-16 mb-8 text-center flex-col">
 				<Signature />
-				<h1
-					class="mr-auto ml-auto align-center justify-center text-center fade text-2xl md:text-4xl lg:text-5xl text-white md:p-0"
-				>
-					<span class="leading-relaxed border-b-2 border-yellow-500"
-						>Web Developer and Computer Science Student</span
-					>
+				<h1 class="mr-auto ml-auto align-center justify-center text-center fade text-2xl md:text-4xl lg:text-5xl text-white md:p-0">
+					<span class="leading-relaxed border-b-2 border-yellow-500">Web Developer and Computer Science Student</span>
 				</h1>
 				<div class="hidden md:block mt-16">
 					<a href="/Matthew Gardner Resume.pdf" download="">
@@ -30,16 +41,53 @@ import Layout from "../layouts/Layout.astro";
 				<img class="portrait" src="/portrait1.jpg" />
 			</div>
 		</section>
+		<section class="space-y-2 mb-3 container mx-auto">
+			<h2 class="">About Me</h2>
+			<p class="text-2xl">
+				I am a rising Junior at Purdue University majoring in Computer Science. I like to make things! Specifically I really enjoy coding things, anything computer related I really enjoy. I
+				really like to make things that other people will use, it's always cool to see your creation get some use! I also enjoy the problem solving aspect of coding. Problems happen all the
+				time, and its fun for me to think of ways to solve them or have to search for other peoples solutions and combine them to fit my own needs. When I'm not coding or doing schoolwork, I
+				often play video games. I am an avid player of Overwatch and a leader within my schools Overwatch Club and the associated teams. My love for video games is evident in some of the
+				projects that I have made and their influences on some of my work!
+			</p>
+		</section>
+		<section class="space-y-2 mb-3 container mx-auto">
+			<h2>Skills</h2>
+			<p class="text-2xl">
+				I pride myself on being very adaptable, I am always willing to learn and try new technologies. When I code things, I often code across multiple languages at once or have many projects
+				going on at the same time and I do my best to be able to context shift easily between all of these projects and situations. Here are some of the various languages, technologies,
+				frameworks, and more that I've picked up over many years!
+			</p>
+			<div class="mx-auto grid grid-cols-8 justify-center">
+				{sprites.map((sprite) => <img class="p-5" src={sprite.img} />)}
+			</div>
+		</section>
+		<section class="space-y-2 mb-3 container mx-auto">
+			<h2>Projects</h2>
+		</section>
+		<section class="space-y-2 mb-3 container mx-auto">
+			<h2>Contact</h2>
+		</section>
 	</main>
 </Layout>
 
 <style>
+	#wrapper-canvas {
+		display: block;
+		background: #ffffff;
+	}
+	h2 {
+		@apply text-center text-2xl md:text-4xl lg:text-5xl decoration-yellow-500 text-white md:p-0 underline;
+	}
 	.btn {
 		@apply font-bold py-2 px-4 rounded;
 	}
 	.btn-yellow {
 		@apply bg-yellow-500 text-white;
 		transition: 0.25s ease-in-out;
+	}
+	p {
+		@apply text-white;
 	}
 	.btn-yellow:hover {
 		@apply bg-yellow-700;
