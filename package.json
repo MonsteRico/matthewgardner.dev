@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && scp -r dist/* monster@matthewgardner.dev:/var/www/matthewgardner.dev",
     "preview": "astro preview",
     "astro": "astro"
   },
